@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://daegusbsgame.vercel.app/sitemap.xml
