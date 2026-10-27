@@ -440,3 +440,7 @@ table.info th,table.info td{border-bottom-color:#3a3b40}
   .float-cta a{flex:1;border:0;border-radius:0;background:var(--accent);color:#000;padding:18px;font-size:16px;box-shadow:0 -6px 20px rgba(0,0,0,.4)}
   .ftr{padding:40px 0 30px}
 }
+@media (max-width:640px){
+  .cgrid,.posts,.cards3,.rgrid,.sysgrid,.sgrid,.gallery{scroll-padding-inline:16px}
+  .hero-art .tag{display:none}
+}
