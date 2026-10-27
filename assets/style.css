@@ -119,12 +119,12 @@ h3{font-size:20px;font-weight:700}
 .ph[data-label^="웹툰"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/main/curri/toon.png')}
 .ph[data-label^="1인 게임개발"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/main/curri/unity.png')}
 /* 학과 작품 이미지 (대표 이미지와 겹치지 않게 다른 그림) */
-.ph[data-label^="게임원화"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/main/curri/digitaldrawing.png')}
-.ph[data-label^="3D그래픽"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/main/curri/3danimation.png')}
-.ph[data-label^="게임프로그래밍"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/main/curri/unreal.png')}
-.ph[data-label^="게임기획"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/main/curri/gameuiux.png')}
-.ph[data-label^="웹툰"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/main/curri/novel.png')}
-.ph[data-label^="1인 게임개발"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/main/curri/effects.png')}
+.ph[data-label^="게임원화"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/edu/bg/character.jpg')}
+.ph[data-label^="3D그래픽"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/edu/bg/3dcharacter.jpg')}
+.ph[data-label^="게임프로그래밍"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/edu/bg/unreal.jpg')}
+.ph[data-label^="게임기획"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/edu/bg/gameuiux.jpg')}
+.ph[data-label^="웹툰"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/edu/bg/toon.jpg')}
+.ph[data-label^="1인 게임개발"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/edu/bg/unity.jpg')}
 /* 캠퍼스 — 대구점 실제 시설 사진 (공식 홈페이지 오시는 길 페이지) */
 .ph[data-label*="라운지"]{background-image:url('https://daegu.sbsgameacademy.com/img/academy/interior/facility01.jpg')}
 .ph[data-label^="강의실"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/sub/aca-his-003.jpg')}
@@ -444,3 +444,9 @@ table.info th,table.info td{border-bottom-color:#3a3b40}
   .cgrid,.posts,.cards3,.rgrid,.sysgrid,.sgrid,.gallery{scroll-padding-inline:16px}
   .hero-art .tag{display:none}
 }
+
+/* 본문(.prose) 안 버튼 글자색 보정 — 하늘색 버튼에 하늘색 글자 문제 */
+.prose a.btn-primary,.btn-primary{color:var(--accent-ink)}
+.prose a.btn-line{color:#fff}
+.prose a.btn-white,.prose a.btn-dark{color:#000}
+.hdr-cta .btn-primary{color:#121418}
