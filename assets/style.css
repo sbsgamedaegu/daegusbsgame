@@ -460,3 +460,8 @@ table.info th,table.info td{border-bottom-color:#3a3b40}
 .photo-tag{position:absolute;top:16px;right:16px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:700;padding:4px 10px;border-radius:30px;backdrop-filter:blur(4px)}
 .scard.photo-jam{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:340px;background-color:#000;background-repeat:no-repeat;background-size:cover;border:0;background-image:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.92) 100%),url('https://daegu.sbsgameacademy.com/img/event/event25/game_jam2507_01-3.jpg');background-position:center,center 30%}
 .scard.photo-jam p{color:rgba(255,255,255,.85)}
+
+/* ===== SYSTEM 01~04 실사진 카드 (사진 주소는 index.html의 --photo 값) ===== */
+.sys.photo-card{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:280px;border:0;background-color:#000;background-repeat:no-repeat;background-size:cover;background-position:center,center 35%;background-image:linear-gradient(180deg,rgba(0,0,0,.1) 0%,rgba(0,0,0,.55) 40%,rgba(0,0,0,.92) 100%),var(--photo)}
+.sys.photo-card p{color:rgba(255,255,255,.85)}
+.sys.photo-card:hover{background-color:#000}
