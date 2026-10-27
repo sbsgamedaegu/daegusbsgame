@@ -381,3 +381,62 @@ table.info th,table.info td{border-bottom-color:#3a3b40}
 .fbox .btn-dark{background:#fff;color:#000}
 .fres{background:rgba(61,85,214,.18);border:1px solid rgba(150,174,255,.35);color:#fff}
 .fres b{color:var(--soft-blue)}
+
+/* ===== v3: 모바일 최적화 ===== */
+@media (max-width:640px){
+  /* 상단 안내줄 숨김, 헤더 정리 */
+  .topbar{display:none}
+  .sec{padding:48px 0}
+  .sec.tight{padding:40px 0}
+  h2{font-size:24px}
+  .sec-head{margin-bottom:22px;gap:10px}
+  .lead{font-size:15px}
+  /* 첫 화면: 캐릭터를 위로, 여백 축소 */
+  .hero{padding:24px 0 44px}
+  .hero::after{display:none}
+  .hero-grid{gap:0}
+  .hero-art{order:-1;max-width:100%;aspect-ratio:16/10;margin:0 0 24px;border-radius:16px}
+  .hero .eyebrow{font-size:13px;padding:4px 14px;margin-bottom:14px}
+  .hero h1{font-size:32px;margin-bottom:14px}
+  .hero p.sub{font-size:15px;margin-bottom:22px}
+  .hero p.sub br{display:none}
+  .hero .btns{gap:8px;margin-bottom:22px}
+  .hero .btns .btn{padding:14px 20px;font-size:15px}
+  .chips{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .chip{padding:10px;font-size:11px;text-align:center}
+  .chip b{font-size:11px}
+  .quick{gap:10px}
+  .quick a{padding:16px}
+  .quick b{font-size:15px}
+  .quick span{font-size:12px}
+  .banner{padding:18px 20px}
+  /* 카드 목록: 세로로 길게 쌓지 않고 옆으로 넘기기 */
+  .cgrid,.posts,.cards3,.rgrid,.sysgrid,.sgrid,.gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -16px;padding:0 16px 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .cgrid::-webkit-scrollbar,.posts::-webkit-scrollbar,.cards3::-webkit-scrollbar,.rgrid::-webkit-scrollbar,.sysgrid::-webkit-scrollbar,.sgrid::-webkit-scrollbar,.gallery::-webkit-scrollbar{display:none}
+  .cgrid>*,.posts>*,.cards3>*,.rgrid>*,.sysgrid>*,.sgrid>*,.gallery>*{flex:0 0 80%;scroll-snap-align:start}
+  .ccard.hide{display:none}
+  .ccard h3{font-size:17px}
+  .ccard p{font-size:14px}
+  .scard,.sys,.post,.rcard{padding:22px}
+  .rgrid{margin-top:22px}
+  .split{gap:24px}
+  .split .ph{order:-1}
+  .road{gap:8px}
+  .road li{padding:14px}
+  .fbox{padding:22px}
+  .opts button{padding:8px 14px;font-size:14px}
+  .cgrid3{gap:10px}
+  .ccta{padding:20px}
+  .areas{grid-template-columns:1fr 1fr;gap:8px}
+  .areas a{padding:14px}
+  .locals a{padding:7px 14px;font-size:13px}
+  .cta-band{padding:32px 20px;gap:16px}
+  .cta-band .btns{width:100%;flex-direction:column}
+  .cta-band .btns .btn{width:100%}
+  .page-hero{padding:44px 0 32px}
+  /* 하단 고정 상담바 (내용을 가리지 않게) */
+  body{padding-bottom:64px}
+  .float-cta{left:0;right:0;bottom:0;gap:0}
+  .float-cta a{flex:1;border:0;border-radius:0;background:var(--accent);color:#000;padding:18px;font-size:16px;box-shadow:0 -6px 20px rgba(0,0,0,.4)}
+  .ftr{padding:40px 0 30px}
+}
