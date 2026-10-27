@@ -42,3 +42,9 @@ document.querySelectorAll('.tabs').forEach(function(tabs){
     res.classList.add('show');
   });
 })();
+
+// 교습비 안내 연결 (학원법 교습비 게시)
+(function(){
+  document.querySelectorAll('a[href*="tuition.asp"]').forEach(function(a){a.setAttribute('href','/tuition/');a.removeAttribute('target');a.removeAttribute('rel');});
+  document.querySelectorAll('.ftr nav').forEach(function(n){if(!n.querySelector('a[href="/tuition/"]')){var a=document.createElement('a');a.href='/tuition/';a.textContent='교습비 안내';var c=n.querySelector('a[href="/consult/"]');c?c.after(a):n.appendChild(a);}});
+})();
