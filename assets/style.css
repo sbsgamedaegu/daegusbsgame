@@ -131,7 +131,7 @@ h3{font-size:20px;font-weight:700}
 .ph[data-label*="원데이클래스"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/curriculum/ipsipremium/img-03.jpg')}
 .ph[data-label*="전경"]{background-image:url('https://daegu.sbsgameacademy.com/img/academy/interior/facility12.jpg')}
 .ph[data-label="작업 공간"]{background-image:url('https://daegu.sbsgameacademy.com/img/academy/interior/facility10.jpg')}
-.ph[data-label="대구콘텐츠페어"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/event/gstar2026/booth-2024.webp')}
+.ph[data-label="대구콘텐츠페어"]{background-image:url('/assets/daegu-contents-fair.webp');background-position:center 45%}
 .ph[data-label="수강생 작품"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/edu/bg/illustration.jpg')}
 .ph[data-label]::after{display:none}
 
@@ -450,3 +450,11 @@ table.info th,table.info td{border-bottom-color:#3a3b40}
 .prose a.btn-line{color:#fff}
 .prose a.btn-white,.prose a.btn-dark{color:#000}
 .hdr-cta .btn-primary{color:#121418}
+
+/* ===== 실사진 카드: 입시박람회(SYSTEM 05) · 콘텐츠페어(원데이클래스·지역 행사) ===== */
+.sys.photo-ipsi,.scard.photo-fair{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:280px;background-color:#000;background-repeat:no-repeat;background-size:cover;border:0}
+.sys.photo-ipsi{background-image:linear-gradient(180deg,rgba(0,0,0,.1) 0%,rgba(0,0,0,.55) 40%,rgba(0,0,0,.92) 100%),url('https://daegu.sbsgameacademy.com/2025/img/event/pakram-program_img03.png');background-position:center,center 35%}
+.scard.photo-fair{background-image:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.92) 100%),url('/assets/daegu-contents-fair.webp');background-position:center,center 40%;min-height:340px}
+.sys.photo-ipsi p,.scard.photo-fair p{color:rgba(255,255,255,.85)}
+.sys.photo-ipsi:hover,.scard.photo-fair:hover{background-color:#000}
+.photo-tag{position:absolute;top:16px;right:16px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:700;padding:4px 10px;border-radius:30px;backdrop-filter:blur(4px)}
