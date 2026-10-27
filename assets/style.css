@@ -48,9 +48,9 @@ h3{font-size:20px;font-weight:700}
 .topbar a:hover{color:#fff}
 .hdr{position:sticky;top:0;z-index:50;background:#fff;color:var(--text-dark);border-bottom:1px solid #eceef1}
 .hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:80px}
-.logo{display:flex;flex-direction:column;line-height:1.15}
-.logo b{font-size:19px;font-weight:700;color:#1b5fae}
-.logo span{font-family:var(--f-en);font-size:11px;color:#8b8f97;font-weight:700;letter-spacing:.08em}
+/* 로고 — 공식 홈페이지 로고 이미지 그대로 (글자는 검색용으로만 숨겨 둠) */
+.logo{position:relative;display:block;width:188px;height:24px;flex:none;background:url('https://daegu.sbsgameacademy.com/2025/img/common/logo_bk.png') left center/188px auto no-repeat}
+.logo b,.logo span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .gnb{display:flex;gap:34px;font-weight:700;font-size:15px;color:var(--text-dark)}
 .gnb a:hover,.gnb a.on{color:#00a9c1}
 .hdr-cta{display:flex;align-items:center;gap:18px}
@@ -168,10 +168,11 @@ h3{font-size:20px;font-weight:700}
 /* results — 공식 '합격으로 책임지는 교육' 흰 카드 */
 .results{background:transparent;border:0;border-radius:0;padding:0}
 .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
-.rcard{background:#fff;border:0;border-radius:var(--radius);padding:30px 26px;color:var(--text-gray);text-align:center}
-.rcard small{color:#00a9c1;font-size:13px;font-weight:700}
-.rcard b{display:block;font-size:22px;font-weight:800;color:#121418;margin:6px 0 10px}
-.rcard p{font-size:15px;color:var(--text-gray)}
+.rcard{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:var(--radius);padding:30px 26px;color:#fff;text-align:center;transition:border-color .15s,transform .15s}
+.rcard:hover{border-color:var(--accent);transform:translateY(-3px)}
+.rcard small{color:var(--accent);font-size:13px;font-weight:700}
+.rcard b{display:block;font-size:22px;font-weight:800;color:#fff;margin:6px 0 10px}
+.rcard p{font-size:15px;color:var(--ink-2)}
 .note{font-size:13px;color:var(--ink-3);margin-top:18px}
 
 /* system */
@@ -281,7 +282,7 @@ table.info th{width:150px;background:var(--paper-2);font-weight:700}
 /* footer — 공식 홈페이지처럼 밝은 푸터 */
 .ftr{background:#fff;color:#7a7e86;font-size:13px;padding:56px 0 110px;margin-top:40px;border-top:1px solid #eceef1}
 .ftr .top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px}
-.ftr .logo b{color:#1b5fae}
+.ftr .logo{width:180px;height:23px;background-size:180px auto}
 .ftr nav{display:flex;gap:22px;flex-wrap:wrap;color:#3a3d44;font-weight:700}
 .ftr nav a:hover{color:#00a9c1}
 .ftr .biz{line-height:1.9}
@@ -309,7 +310,8 @@ table.info th{width:150px;background:var(--paper-2);font-weight:700}
   .wrap{padding:0 16px}
   .topbar nav{display:none}
   .hdr .wrap{height:64px}
-  .logo b{font-size:16px}
+  .hdr .logo{width:140px;height:18px;background-size:140px auto}
+  .hdr-cta{gap:10px}
   .hdr-cta .btn-primary span{font-size:16px}
   .hdr-cta .btn-primary::before{font-size:10px}
   .sec{padding:60px 0}
