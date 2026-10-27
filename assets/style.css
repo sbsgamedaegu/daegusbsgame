@@ -127,11 +127,11 @@ h3{font-size:20px;font-weight:700}
 .ph[data-label^="1인 게임개발"][data-label$="작품 이미지"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/main/curri/effects.png')}
 /* 캠퍼스 — 대구점 실제 시설 사진 (공식 홈페이지 오시는 길 페이지) */
 .ph[data-label*="라운지"]{background-image:url('https://daegu.sbsgameacademy.com/img/academy/interior/facility01.jpg')}
-.ph[data-label^="강의실"]{background-image:url('https://daegu.sbsgameacademy.com/img/academy/interior/facility04.jpg')}
-.ph[data-label*="원데이클래스"]{background-image:url('https://daegu.sbsgameacademy.com/img/academy/interior/facility07.jpg')}
+.ph[data-label^="강의실"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/sub/aca-his-003.jpg')}
+.ph[data-label*="원데이클래스"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/curriculum/ipsipremium/img-03.jpg')}
 .ph[data-label*="전경"]{background-image:url('https://daegu.sbsgameacademy.com/img/academy/interior/facility12.jpg')}
 .ph[data-label="작업 공간"]{background-image:url('https://daegu.sbsgameacademy.com/img/academy/interior/facility10.jpg')}
-.ph[data-label="대구콘텐츠페어"]{background-image:url('https://daegu.sbsgameacademy.com/img/academy/interior/facility02.jpg')}
+.ph[data-label="대구콘텐츠페어"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/event/gstar2026/booth-2024.webp')}
 .ph[data-label="수강생 작품"]{background-image:url('https://daegu.sbsgameacademy.com/2025/img/edu/bg/illustration.jpg')}
 .ph[data-label]::after{display:none}
 
