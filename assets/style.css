@@ -553,7 +553,7 @@ body.home main .faq summary::after{color:var(--soft-blue)}
 body.home main .faq details[open]{border-color:var(--soft-blue)}
 body.home main .tabs button{border:1px solid #cfcac0;color:var(--ink);background:#fff}
 body.home main .tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-body.home main .fbox{background:#15171c;color:#fff;--ink-2:rgba(255,255,255,.72);border:0}
+body.home main .fbox{background:#2e2f33;color:#fff;--ink:#fff;--ink-2:rgba(255,255,255,.72);--soft-blue:#96aeff;border:0}
 body.home main .fbox .opts button{color:#fff}
 body.home main .ccard .tl{display:block;font-size:14px;font-weight:600;color:var(--ink);margin:0 0 4px;opacity:.9}
 body.home main .ccard h3{font-size:21px}
@@ -564,7 +564,7 @@ body.home .tone-panel{margin:0 24px;border-radius:32px;background:radial-gradien
 body.home main .tone-panel + .sec{padding-top:96px!important}
 body.home .tone-panel .eyebrow{color:#96aeff}
 body.home .tone-panel .lead{color:rgba(255,255,255,.7)}
-body.home .tone-panel .scard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+body.home .tone-panel .scard:not(.photo-jam):not(.photo-fair):not(.photo-bg){background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
 body.home .tone-panel .scard li{background:rgba(150,174,255,.12);border-color:rgba(150,174,255,.3);color:#dbe3ff}
 
 /* 특화 프로그램 실사진 카드 */
@@ -615,3 +615,6 @@ body.home .tone-panel .scard li{background:rgba(150,174,255,.12);border-color:rg
   .who{flex:0 0 78%;min-height:300px;scroll-snap-align:start}
   .scard.photo-bg{min-height:300px}
 }
+
+/* 입시프리미엄반 사진: 천장 대신 설명회 참석자가 보이도록 */
+.scard.photo-bg[style*="ipsipremium"]{background-position:center,center 80%!important}
