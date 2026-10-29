@@ -635,3 +635,12 @@ body.home main .fbox .fres b{color:#24318f}
 body.home main .fbox .fres .more{color:#24318f;font-weight:700}
 body.home main .fbox .fres .btn{white-space:nowrap}
 @media (max-width:640px){body.home main .fbox{padding:30px 20px 24px;border-radius:22px}body.home main .fbox .fres .btn{font-size:14px;padding:12px 18px}body.home main .fbox .opts button{padding:9px 15px;font-size:14px}}
+
+/* 지역별 안내 · FAQ — 연한 배경 패널 */
+body.home main .sec.soft-panel[style]{margin:0 24px 24px;border-radius:32px;padding:80px 0!important;border:1px solid rgba(51,71,196,.08)}
+body.home main .local-sec{background:radial-gradient(ellipse 60% 80% at 90% 0%,rgba(8,206,232,.10),transparent 60%),linear-gradient(160deg,#eef1fc 0%,#e6ebfa 100%)}
+body.home main .faq-sec{background:radial-gradient(ellipse 60% 80% at 10% 0%,rgba(61,85,214,.08),transparent 60%),linear-gradient(160deg,#eaf6f8 0%,#e8eefa 100%)}
+body.home main .soft-panel .areas a,body.home main .soft-panel .faq details{border-color:rgba(51,71,196,.10);box-shadow:0 8px 24px rgba(16,22,74,.06)}
+body.home main .soft-panel .locals a{border-color:rgba(51,71,196,.18)}
+body.home main .soft-panel .faq details[open]{border-color:#3d55d6}
+@media (max-width:640px){body.home main .sec.soft-panel[style]{margin:0 10px 16px;border-radius:22px;padding:56px 0!important}}
