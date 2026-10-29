@@ -465,3 +465,38 @@ table.info th,table.info td{border-bottom-color:#3a3b40}
 .sys.photo-card{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:280px;border:0;background-color:#000;background-repeat:no-repeat;background-size:cover;background-position:center,center 35%;background-image:linear-gradient(180deg,rgba(0,0,0,.1) 0%,rgba(0,0,0,.55) 40%,rgba(0,0,0,.92) 100%),var(--photo)}
 .sys.photo-card p{color:rgba(255,255,255,.85)}
 .sys.photo-card:hover{background-color:#000}
+
+/* ===== 히어로 모션: 크로키 → 밑색 → 완성 ===== */
+.art-seq{position:absolute;inset:0;z-index:1;overflow:hidden;background:#eef0f2}
+.as-layer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.as-0{clip-path:inset(0 0 0 0);filter:contrast(1.05)}
+.as-1,.as-2{-webkit-mask-image:linear-gradient(115deg,#000 40%,transparent 60%);mask-image:linear-gradient(115deg,#000 40%,transparent 60%);-webkit-mask-size:300% 100%;mask-size:300% 100%;-webkit-mask-position:100% 0;mask-position:100% 0;transition:-webkit-mask-position 1.5s cubic-bezier(.55,.1,.3,1),mask-position 1.5s cubic-bezier(.55,.1,.3,1),filter 1s}
+.as-2{filter:saturate(.85)}
+.art-seq[data-stage="1"] .as-1,.art-seq[data-stage="2"] .as-1,.art-seq[data-stage="2"] .as-2{-webkit-mask-position:0 0;mask-position:0 0}
+.art-seq[data-stage="2"] .as-2{filter:saturate(1.08)}
+/* 크로키가 그려지는 첫 등장 */
+.art-seq.drawing .as-0{animation:as-draw 1.3s cubic-bezier(.6,.05,.3,1) both}
+@keyframes as-draw{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+/* 완성 순간의 빛 */
+.as-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 60% 40%,rgba(255,236,170,.55),transparent 60%);opacity:0;mix-blend-mode:screen}
+.art-seq[data-stage="2"] .as-glow{animation:as-glow 1.4s .5s ease-out both}
+@keyframes as-glow{0%{opacity:0}35%{opacity:1}100%{opacity:0}}
+/* 단계 UI */
+.as-ui{position:absolute;left:16px;right:16px;top:16px;z-index:3;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.as-steps{display:flex;gap:4px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border-radius:999px;padding:4px}
+.as-steps button{border:0;background:transparent;color:#cfd3dc;font:600 12px/1 var(--f-kr,inherit);padding:8px 12px;border-radius:999px;cursor:pointer;transition:background .3s,color .3s}
+.as-steps button i{font-style:normal;font-size:10px;opacity:.7;margin-right:5px}
+.as-steps button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.as-bar{flex:1 1 60px;height:3px;background:rgba(0,0,0,.25);border-radius:3px;overflow:hidden;min-width:40px}
+.as-bar b{display:block;height:100%;width:0;background:var(--accent);transition:width .6s ease}
+.art-seq[data-stage="1"] .as-bar b{width:55%}.art-seq[data-stage="2"] .as-bar b{width:100%}
+.as-replay{border:0;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);color:#fff;font-size:12px;padding:8px 12px;border-radius:999px;cursor:pointer;opacity:0;transition:opacity .4s}
+.art-seq[data-stage="2"] .as-replay{opacity:1}
+.as-steps button:focus-visible,.as-replay:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* 제목 '만드는 사람'도 선 → 채색 */
+.hero em.paint{transition:color .6s ease,-webkit-text-stroke-color .6s ease,text-shadow .6s}
+.hero[data-stage="0"] em.paint{color:transparent;-webkit-text-stroke:1.4px #e9ecf3}
+.hero[data-stage="1"] em.paint{color:#9fdbe4;-webkit-text-stroke:0 transparent}
+.hero[data-stage="2"] em.paint{color:var(--accent);-webkit-text-stroke:0 transparent;text-shadow:0 0 24px rgba(8,206,232,.45)}
+@media(max-width:620px){.as-ui{left:10px;right:10px;top:10px;gap:6px}.as-steps button{padding:7px 9px;font-size:11px}.as-bar{display:none}.as-replay{padding:7px 10px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){.art-seq *,.hero em.paint{animation:none!important;transition:none!important}}
