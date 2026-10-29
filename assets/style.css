@@ -546,7 +546,7 @@ body.home main .ccta.main span,body.home main .sys.big p{color:rgba(255,255,255,
 body.home main .ccta.main:hover{background:linear-gradient(140deg,#141b5a,#2b3aa6 60%,#4a62e0);border:0}
 body.home main .sys.photo-card,body.home main .sys.photo-ipsi{color:#fff;border:0}
 body.home main .sys.photo-card small,body.home main .sys.photo-ipsi small{color:#b9c8ff}
-body.home main .ph{background:linear-gradient(135deg,#dcd8ce,#c9c4b8)}
+body.home main .ph{background-color:#d6d2c8}
 body.home main .locals a{border:1px solid #cfcac0;color:var(--ink);background:#fff}
 body.home main .locals a:hover{border-color:var(--soft-blue);color:var(--soft-blue)}
 body.home main .faq summary::after{color:var(--soft-blue)}
