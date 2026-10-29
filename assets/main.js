@@ -48,3 +48,34 @@ document.querySelectorAll('.tabs').forEach(function(tabs){
   document.querySelectorAll('a[href*="tuition.asp"]').forEach(function(a){a.setAttribute('href','/tuition/');a.removeAttribute('target');a.removeAttribute('rel');});
   document.querySelectorAll('.ftr nav').forEach(function(n){if(!n.querySelector('a[href="/tuition/"]')){var a=document.createElement('a');a.href='/tuition/';a.textContent='교습비 안내';var c=n.querySelector('a[href="/consult/"]');c?c.after(a):n.appendChild(a);}});
 })();
+
+// 히어로 모션: 크로키 → 밑색 → 완성 (자동 재생 + 단계 선택 + 다시 그리기)
+(function(){
+  var seq=document.querySelector('.art-seq'); if(!seq) return;
+  var hero=document.querySelector('.hero');
+  var btns=[].slice.call(seq.querySelectorAll('[data-pick]'));
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var timers=[], played=false;
+  function set(n){
+    seq.setAttribute('data-stage',n); if(hero) hero.setAttribute('data-stage',n);
+    btns.forEach(function(b,i){b.setAttribute('aria-pressed',String(i===n));});
+  }
+  function clear(){timers.forEach(clearTimeout);timers=[];}
+  function play(){
+    clear(); set(0);
+    if(reduce){set(2);return;}
+    seq.classList.remove('drawing'); void seq.offsetWidth; seq.classList.add('drawing');
+    timers.push(setTimeout(function(){set(1);},1900));
+    timers.push(setTimeout(function(){set(2);},3900));
+  }
+  btns.forEach(function(b,i){b.addEventListener('click',function(){clear();seq.classList.remove('drawing');set(i);});});
+  seq.querySelector('.as-replay').addEventListener('click',play);
+  set(0);
+  if('IntersectionObserver' in window){
+    var out=true;
+    new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting&&e.intersectionRatio>.5&&out){out=false;play();}
+      else if(!e.isIntersecting){out=true;}
+    });},{threshold:[0,.5]}).observe(seq);
+  } else play();
+})();
