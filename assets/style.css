@@ -644,3 +644,4 @@ body.home main .soft-panel .areas a,body.home main .soft-panel .faq details{bord
 body.home main .soft-panel .locals a{border-color:rgba(51,71,196,.18)}
 body.home main .soft-panel .faq details[open]{border-color:#3d55d6}
 @media (max-width:640px){body.home main .sec.soft-panel[style]{margin:0 10px 16px;border-radius:22px;padding:56px 0!important}}
+.scard.photo-bg[style*="indie-benefit01"]{background-position:center,center 40%!important}
